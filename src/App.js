@@ -1,7 +1,12 @@
 import './App.css';
 
-function App() {
 
+function App() {
+  return(
+    <div>WTF</div>
+  )
 }
 
 export default App;
+
+

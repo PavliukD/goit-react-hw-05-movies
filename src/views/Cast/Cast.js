@@ -11,7 +11,8 @@ function Cast(){
             return response.json()
         }).then(data => {
             setCast(data.cast)})
-    },[id])
+        // eslint-disable-next-line
+    },[])
 
     return(
         <ul>
@@ -19,7 +20,7 @@ function Cast(){
                 const imageURL =`${url}${actor.profile_path}`
                 return(
                     <li>
-                        {actor.profile_path && <img src = {imageURL} />}
+                        {actor.profile_path && <img src = {imageURL} alt = {actor.name}/>}
                         <p>{actor.name}</p>
                         <p>Charaster: {actor.character}</p>
                     </li>

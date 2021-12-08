@@ -11,8 +11,7 @@ function Cast(){
             return response.json()
         }).then(data => {
             setCast(data.cast)})
-        // eslint-disable-next-line
-    },[])
+    },[id])
 
     return(
         <ul>

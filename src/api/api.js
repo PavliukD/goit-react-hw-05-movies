@@ -20,7 +20,6 @@ async function getMovieDetails(movieID){
 
 async function getMovieCredits(movieID){
     const response = await fetch(`${baseURL}/movie/${movieID}/credits?api_key=${apiKey}&language=en-US`)
-    const url = `${baseURL}/movie/${movieID}/credits?api_key=${apiKey}&language=en-US`
     return response
 }
 

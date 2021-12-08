@@ -1,21 +1,27 @@
-// import { Route, Routes } from 'react-router';
+import { Route, Routes } from 'react-router';
 import './App.css';
-import Header from './components/Layouts/Header/Header';
-import HomePage from './components/Layouts/HomePage/HomePage';
-import MovieCard from './components/Layouts/MovieCard/MovieCard';
-import Cast from './components/Layouts/Cast/Cast';
+import Header from './views/Header/Header';
+import HomePage from './views/HomePage/HomePage';
+import MovieDetailsPage from './views/MovieDetailsPage/MovieDetailsPage';
+import Cast from './views/Cast/Cast';
+import Reviews from './views/Reviews/Reviews';
+import MoviesPage from './views/MoviesPage/MoviesPage';
+
 
 
 function App() {
   return(
     <div>
-      {/* <Header /> */}
-      {/* <HomePage /> */}
-      <MovieCard id = {268}/>
-      {/* <Cast id = {268} /> */}
+    <Header />
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/movies' element={<MoviesPage />} />
+      <Route path="/movies/:id" element={<MovieDetailsPage />}>
+        <Route path="cast" element={<Cast />} />
+        <Route path="reviews" element={<Reviews />} />
+      </Route>
+    </Routes>
     </div>
-
-
   )
 }
 

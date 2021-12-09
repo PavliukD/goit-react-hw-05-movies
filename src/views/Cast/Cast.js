@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getMovieCredits } from "../../api/api"
+import ActorCards from '../../components/ActorCards/ActorCards'
 
 function Cast(){
     const [cast, setCast] = useState([])
-    const url = 'https://image.tmdb.org/t/p/w500'
     const {id} = useParams()
     useEffect(() => {
         getMovieCredits(id).then(response => {
@@ -14,18 +14,9 @@ function Cast(){
     },[id])
 
     return(
-        <ul>
-            {cast && cast.map(actor => {
-                const imageURL =`${url}${actor.profile_path}`
-                return(
-                    <li key={actor.name}>
-                        {actor.profile_path && <img src = {imageURL} alt = {actor.name}/>}
-                        <p>{actor.name}</p>
-                        <p>Charaster: {actor.character}</p>
-                    </li>
-                )
-            })}
-        </ul>
+        <>
+        {cast && <ActorCards actorsList = {cast} />}
+        </>
     )
 
 }

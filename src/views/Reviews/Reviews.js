@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getMovieReviews } from '../../api/api'
 import ReviewsCards from '../../components/ReviewsCards/ReviewsCards'
+import s from './Reviews.module.css'
 
 function Reviews(){
 
@@ -19,7 +20,7 @@ function Reviews(){
 
     return(
         <>
-        {reviews.length ? <ReviewsCards reviewsContent={reviews} /> : <p>We don't have any reviews for this movie</p>}
+        {reviews.length ? <ReviewsCards reviewsContent={reviews} /> : <p className={s.notification}>We don't have any reviews for this movie</p>}
         </>
     )
 }

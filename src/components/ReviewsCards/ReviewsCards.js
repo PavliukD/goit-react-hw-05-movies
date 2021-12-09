@@ -1,4 +1,4 @@
-
+import s from './ReviewsCards.module.css'
 
 function ReviewsCards({reviewsContent}){
 
@@ -7,7 +7,7 @@ function ReviewsCards({reviewsContent}){
             {reviewsContent.map(review => {
                 return(
                     <li key={review.author}>
-                        <p>Author: {review.author}</p>
+                        <p className={s.author}>Author: {review.author}</p>
                         <p>{review.content}</p>
                     </li>
                 )

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getFilmByQuery } from '../../api/api'
 import MoviesList from '../../components/MoviesList/MoviesList'
+import s from './MoviesPage.module.css'
 
 function MoviesPage(){
 
@@ -28,12 +29,11 @@ function MoviesPage(){
 
     return(
         <>
-        <form onSubmit = {handleSubmit}>
+        <form onSubmit = {handleSubmit} className={s.form}>
             <input 
                 onInput={handleInput}
-                value = {input}
-            ></input>
-            <button type = "submit" ></button>
+                value = {input} className={s.input}></input>
+            <button type = "submit" >Search</button>
         </form>
         {movies && <MoviesList moviesList={movies} />}
         </>

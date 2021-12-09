@@ -1,0 +1,12 @@
+.form {
+  margin-top: 5px;
+}
+
+.input {
+  width: 360px;
+  height: 24px;
+}
+
+.input:focus {
+  border-color: blue;
+}

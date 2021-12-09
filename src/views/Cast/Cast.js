@@ -18,7 +18,7 @@ function Cast(){
             {cast && cast.map(actor => {
                 const imageURL =`${url}${actor.profile_path}`
                 return(
-                    <li>
+                    <li key={actor.name}>
                         {actor.profile_path && <img src = {imageURL} alt = {actor.name}/>}
                         <p>{actor.name}</p>
                         <p>Charaster: {actor.character}</p>

@@ -20,7 +20,7 @@ function Reviews(){
 
     return(
         <>
-        {reviews.length ? <ReviewsCards reviewsContent={reviews} /> : <p className={s.notification}>We don't have any reviews for this movie</p>}
+            {reviews.length ? <ReviewsCards reviewsContent={reviews} /> : <p className={s.notification}>We don't have any reviews for this movie</p>}
         </>
     )
 }

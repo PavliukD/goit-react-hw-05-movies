@@ -13,8 +13,8 @@ function HomePage(){
 
     return(
         <>
-        <h2>Trending today</h2>
-        {movies && <MoviesList moviesList={movies} /> }
+            <h2>Trending today</h2>
+            {movies && <MoviesList moviesList={movies} /> }
         </>
     )
 }

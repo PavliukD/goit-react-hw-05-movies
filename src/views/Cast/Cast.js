@@ -15,7 +15,7 @@ function Cast(){
 
     return(
         <>
-        {cast && <ActorCards actorsList = {cast} />}
+            {cast && <ActorCards actorsList = {cast} />}
         </>
     )
 

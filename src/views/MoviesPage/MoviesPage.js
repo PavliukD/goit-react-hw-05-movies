@@ -29,13 +29,13 @@ function MoviesPage(){
 
     return(
         <>
-        <form onSubmit = {handleSubmit} className={s.form}>
-            <input 
-                onInput={handleInput}
-                value = {input} className={s.input}></input>
-            <button type = "submit" >Search</button>
-        </form>
-        {movies && <MoviesList moviesList={movies} />}
+            <form onSubmit = {handleSubmit} className={s.form}>
+                <input 
+                    onInput={handleInput}
+                    value = {input} className={s.input}></input>
+                <button type = "submit" >Search</button>
+            </form>
+            {movies && <MoviesList moviesList={movies} />}
         </>
     )
 }
